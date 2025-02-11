@@ -11,36 +11,32 @@ namespace FormasGeometricas.Models
         private int _radioY;
         private int _radioX;
 
-        protected double _area;
-        protected double _perimeter;
         public int RadioY { get { return _radioY; } set { _radioY = value; } }
         public int RadioX { get { return _radioX; } set { _radioX = value; } }
-        public double Area { get => _area; }
-        public double Perimeter { get => _perimeter; }
+       
 
         public Elipse(int radioY, int radioX) 
         {
             RadioX = radioX;
             RadioY = radioY;
-            CalculateArea();
-            CalculatePerimeter();
+           
         }
 
-        public virtual double CalculateArea()
+        public override double GetArea()
         {
-            _area = Math.PI * RadioX * RadioY;
-            return _area;
+            return Math.PI * RadioX * RadioY;
+           
         }
 
-        public virtual double CalculatePerimeter()
+        public override double GetPerimeter()
         {
-             _perimeter = Math.PI*(3*(RadioY + RadioX) - Math.Sqrt((3 * RadioY + RadioX) * (RadioY + RadioX * 3)));
-            return _perimeter;
+             return Math.PI*(3*(RadioY + RadioX) - Math.Sqrt((3 * RadioY + RadioX) * (RadioY + RadioX * 3)));
+         
         }
 
         public override string ToString()
         {
-            return $"los radios de la elipse son Radio 1:{RadioX} | Radio 2: {RadioY} | Area: {Area:F2} | Perimetro:{Perimeter:F2}";
+            return $"los radios de la elipse son Radio 1:{RadioX} | Radio 2: {RadioY} | Area: {GetArea():F2} | Perimetro:{GetPerimeter():F2}";
         }
     }
 }

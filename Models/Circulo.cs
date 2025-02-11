@@ -16,13 +16,13 @@ namespace FormasGeometricas.Models
         }
 
 
-        public override double CalculateArea()
+        public override double GetArea()
         {
             return (Math.PI * RadioX*2)/2;
             
         }
 
-        public override double CalculatePerimeter()
+        public override double GetPerimeter()
         {
            return 2 * RadioX * Math.PI;
             
@@ -30,7 +30,7 @@ namespace FormasGeometricas.Models
 
         public override string ToString()
         {
-            return $"El radio del circulo es {RadioX:F2} | Area: {CalculateArea():F2} | Perimetro: {CalculatePerimeter():F2}";
+            return $"El radio del circulo es {RadioX:F2} | Area: {GetArea():F2} | Perimetro: {GetPerimeter():F2}";
         }
     }
 }

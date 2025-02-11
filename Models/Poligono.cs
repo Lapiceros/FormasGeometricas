@@ -9,14 +9,20 @@ namespace FormasGeometricas.Models
 {
     internal class Poligono : Forma
     {
-        private int _numeroLados;
+        protected int _numeroLados;
 
         public int NumeroLados { get { return _numeroLados; } }
 
-        public Poligono(int lados)
+        public Poligono(){}
+
+        public override double GetArea()
         {
-            _numeroLados = lados;
-            
+            throw new NotImplementedException();
+        }
+
+        public override double GetPerimeter()
+        {
+            throw new NotImplementedException();
         }
     }
 }
