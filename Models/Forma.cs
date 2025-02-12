@@ -8,11 +8,6 @@ namespace FormasGeometricas.Models
 {
     internal abstract class Forma
     {
-        protected double _area;
-        protected double _perimeter;
-        public double Area { get => _area; }
-        public double Perimeter { get => _perimeter; }
-
         public abstract double GetArea();
         public abstract double GetPerimeter();
     }

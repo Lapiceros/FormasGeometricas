@@ -8,7 +8,7 @@ namespace FormasGeometricas.Models
 {
     internal class Triangulo : Poligono
     {
-        private int _lado;
+        protected double _lado;
         public Triangulo(int lado)
         { 
             _numeroLados = 3;

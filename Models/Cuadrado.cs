@@ -25,7 +25,7 @@ namespace FormasGeometricas.Models
 
         public override string ToString()
         {
-            return $"Las propiedades del cuadrado son tamaño de los lados {_ladoX:F2} | Area: {GetArea():F2} | Perimetro: {GetPerimeter():F2}";
+            return $"Las propiedades del cuadrado son: tamaño de los lados: {_ladoX:F2} | Area: {GetArea():F2} | Perimetro: {GetPerimeter():F2}";
         }
     }
 }

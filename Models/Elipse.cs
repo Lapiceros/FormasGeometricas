@@ -8,14 +8,14 @@ namespace FormasGeometricas.Models
 {
     internal class Elipse : Forma
     {
-        private int _radioY;
-        private int _radioX;
+        protected double _radioY;
+        protected double _radioX;
 
-        public int RadioY { get { return _radioY; } set { _radioY = value; } }
-        public int RadioX { get { return _radioX; } set { _radioX = value; } }
+        public double RadioY { get { return _radioY; } set { _radioY = value; } }
+        public double RadioX { get { return _radioX; } set { _radioX = value; } }
        
 
-        public Elipse(int radioY, int radioX) 
+        public Elipse(double radioY, double radioX) 
         {
             RadioX = radioX;
             RadioY = radioY;
@@ -36,7 +36,7 @@ namespace FormasGeometricas.Models
 
         public override string ToString()
         {
-            return $"los radios de la elipse son Radio 1:{RadioX} | Radio 2: {RadioY} | Area: {GetArea():F2} | Perimetro:{GetPerimeter():F2}";
+            return $"los radios de la elipse son Radio 1: {RadioX} | Radio 2: {RadioY} | Area: {GetArea():F2} | Perimetro: {GetPerimeter():F2}";
         }
     }
 }

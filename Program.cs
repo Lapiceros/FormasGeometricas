@@ -11,9 +11,8 @@ namespace FormasGeometricas
     {
         static void Main(string[] args)
         {
-            Circulo circle = new Circulo(7);
-            Console.WriteLine(circle.ToString());
-           
+            Diagrama diagrama = new Diagrama();
+            Console.WriteLine(diagrama.ToString());
             Console.ReadKey();
         }
     }

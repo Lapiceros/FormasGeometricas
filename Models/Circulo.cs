@@ -9,7 +9,7 @@ namespace FormasGeometricas.Models
 {
     internal class Circulo : Elipse
     {
-        public Circulo(int radio) : base(radio, radio) 
+        public Circulo(double radio) : base(radio, radio) 
         { 
             RadioX = radio;
 

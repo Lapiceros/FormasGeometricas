@@ -8,8 +8,8 @@ namespace FormasGeometricas.Models
 {
     internal class Rectangulo : Poligono
     {
-        protected int _ladoX;
-        protected int _ladoY;
+        protected double _ladoX;
+        protected double _ladoY;
         public Rectangulo(int ladoX, int ladoY) 
         { 
             _numeroLados = 4;

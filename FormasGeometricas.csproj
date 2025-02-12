@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Models\Circulo.cs" />
     <Compile Include="Models\Cuadrado.cs" />
+    <Compile Include="Models\Diagrama.cs" />
     <Compile Include="Models\Elipse.cs" />
     <Compile Include="Models\Forma.cs" />
     <Compile Include="Models\Poligono.cs" />
