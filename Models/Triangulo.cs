@@ -9,9 +9,9 @@ namespace FormasGeometricas.Models
     internal class Triangulo : Poligono
     {
         protected double _lado;
-        public Triangulo(int lado)
+        public Triangulo(int lado):base(3)
         { 
-            _numeroLados = 3;
+  
             _lado = lado;
         }
 

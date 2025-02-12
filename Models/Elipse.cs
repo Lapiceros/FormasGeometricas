@@ -36,7 +36,7 @@ namespace FormasGeometricas.Models
 
         public override string ToString()
         {
-            return $"los radios de la elipse son Radio 1: {RadioX} | Radio 2: {RadioY} | Area: {GetArea():F2} | Perimetro: {GetPerimeter():F2}";
+            return $"Las propiedades de la elipse son Radio 1: {RadioX} | Radio 2: {RadioY} | Area: {GetArea():F2} | Perimetro: {GetPerimeter():F2}";
         }
     }
 }

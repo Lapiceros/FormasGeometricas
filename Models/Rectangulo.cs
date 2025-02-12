@@ -10,9 +10,8 @@ namespace FormasGeometricas.Models
     {
         protected double _ladoX;
         protected double _ladoY;
-        public Rectangulo(int ladoX, int ladoY) 
+        public Rectangulo(int ladoX, int ladoY) : base(4)
         { 
-            _numeroLados = 4;
             _ladoX = ladoX;
             _ladoY = ladoY;
         }

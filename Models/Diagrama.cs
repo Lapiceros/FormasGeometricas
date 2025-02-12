@@ -8,13 +8,12 @@ namespace FormasGeometricas.Models
 {
     internal class Diagrama
     {
-        private List<Forma> _formas;
+        private List<Forma> _formas = new List<Forma>();
         private static Random _random = new Random();
         public List<Forma> Formas { get { return _formas; } }
 
         public Diagrama()
         {
-            _formas = new List<Forma>();
             int cantidadFormas = _random.Next(1, 10);
             for (int i = 0; i < cantidadFormas; i++)
             {

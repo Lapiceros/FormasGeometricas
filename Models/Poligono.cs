@@ -7,22 +7,16 @@ using System.Threading.Tasks;
 
 namespace FormasGeometricas.Models
 {
-    internal class Poligono : Forma
+    internal abstract class Poligono : Forma
     {
         protected int _numeroLados;
 
         public int NumeroLados { get { return _numeroLados; } }
 
-        public Poligono(){}
-
-        public override double GetArea()
+        public Poligono(int nLados)
         {
-            throw new NotImplementedException();
+            _numeroLados = nLados;
         }
 
-        public override double GetPerimeter()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
