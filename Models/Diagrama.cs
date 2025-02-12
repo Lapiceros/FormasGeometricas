@@ -35,26 +35,15 @@ namespace FormasGeometricas.Models
                 default: throw new Exception("Tipo de forma desconocido");
             }
         }
-
-        public double GetAreaTotal()
+        
+        private double GetTotal(Func<Forma, double> selector)
         {
-            double areaTotal = 0;
-            foreach (var forma in _formas)
-            {
+            return _formas.Sum(selector);
+        }
+        public double GetAreaTotal() => GetTotal(f => f.GetArea());
 
-                areaTotal += forma.GetArea();
-            }
-            return areaTotal;
-        }
-        public double GetPerimetroTotal()
-        {
-            double perimetroTotal = 0;
-            foreach (var forma in _formas)
-            {
-                perimetroTotal += forma.GetPerimeter();
-            }
-            return perimetroTotal;
-        }
+        public double GetPerimetroTotal() => GetTotal(f => f.GetPerimeter());
+       
         public override string ToString()
         {
             foreach (var item in _formas)
